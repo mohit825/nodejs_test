@@ -1,0 +1,7 @@
+<div>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm)" >
+    <input type="number" formControlName="userId" >
+    <input type="text" formControlName="userName">
+    <button type="submit" [disabled]="!userForm.valid"  (click) ="formValueChild.next(userForm)">Submit</button>
+  </form>
+</div>
